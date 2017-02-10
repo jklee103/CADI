@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="com.example.a0.myapplication.MainActivity">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="2">
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="#CCBBFF"
+            android:text="자기소개"
+            android:gravity="center"
+            android:textSize="10pt" />
+    </LinearLayout>
+    <!--가중치 4로 주면 1/4되서 더 조그매짐-->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:background="#FFCCCC">
+        <!--horizontal이라서 굳이 설정안해도됨-->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="3">
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="200dp"
+                android:scaleType="fitXY"
+                android:src="@drawable/cat"/>
+        </LinearLayout>
+        <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="2">
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:padding="20dp">
+                <TextView
+                    android:id="@+id/name"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:ellipsize="end"
+                    android:text="이름" />
+                <EditText
+                    android:id="@+id/namet"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignBaseline="@+id/name"
+                    android:layout_marginLeft="20dp"
+                    android:layout_toEndOf="@+id/part"
+                    android:textSize="5pt"
+                    android:hint="이름을 입력해주세요." />
+                <TextView
+                    android:id="@+id/age"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/name"
+                    android:text="나이" />
+                <EditText
+                    android:id="@+id/aget"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignBaseline="@+id/age"
+                    android:layout_marginLeft="20dp"
+                    android:layout_toEndOf="@+id/part"
+                    android:textSize="5pt"
+                    android:hint="나이를 입력해주세요." />
+                <TextView
+                    android:id="@+id/univ"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/age"
+                    android:text="학교" />
+                <EditText
+                    android:id="@+id/univt"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignBaseline="@+id/univ"
+                    android:layout_marginLeft="20dp"
+                    android:layout_toEndOf="@+id/part"
+                    android:textSize="5pt"
+                    android:hint="학교를 입력해주세요." />
+                <TextView
+                    android:id="@+id/part"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/univ"
+                    android:text="지원분야" />
+                <EditText
+                    android:id="@+id/partt"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignBaseline="@+id/part"
+                    android:layout_marginLeft="20dp"
+                    android:layout_toEndOf="@+id/part"
+                    android:textSize="5pt"
+                    android:hint="지원분야를 입력해주세요." />
+            </RelativeLayout>
+        </LinearLayout>
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="2">
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:src="@drawable/seoul"
+                android:scaleType="centerCrop"
+                android:tint="#55FFCCCC"/>
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="bottom|right"
+                android:text="클릭!"/>
+        </FrameLayout>
+    </LinearLayout>
+</LinearLayout>
